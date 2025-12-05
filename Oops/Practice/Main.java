@@ -1,0 +1,65 @@
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student();
+		Student s3 = new Student("Praveen",22,78.5f);
+		Student s2 = new Student(s1);
+		Student s4 = new Student();
+		
+        // s1.name="Praveen";
+        // s1.age=22;
+        // s1.marks=99;
+        System.out.println(s1.name);
+        System.out.println(s1.age);
+        System.out.println(s1.marks);
+		System.out.println("--------");
+		System.out.println(s2.name);
+        System.out.println(s2.age);
+        System.out.println(s2.marks);
+		System.out.println("--------");
+		System.out.println(s3.name);
+        System.out.println(s3.age);
+        System.out.println(s3.marks);
+		//System.out.println(s1.Greet());
+		s1.Greet();
+		s1.Changename("BAARATH");
+		s4.Changename("Manoj");
+		 System.out.println(s1.name);
+		  System.out.println(s4.name);
+		
+    }
+}
+class Student{
+    String name;
+    int age;
+    float marks;
+	
+	void Changename(String newname)
+	{
+		this.name=newname;	
+	}
+	
+	Student()
+	{
+		System.out.println("VANAKAM");
+		this.name="JAAAAVID";
+		this.age=23;
+		this.marks=67.3f;
+		this("Praveen",22,78.5f);
+	}
+	void Greet()
+	{
+		System.out.println("VANAKAaaaM");
+	}
+	Student(Student other)
+	{
+		this.name=other.name;
+		this.age=other.age;
+		this.marks=other.marks;
+	}
+	Student(String name,int age,float marks)
+	{
+		this.name=name;
+		this.age=age;
+		this.marks=marks;
+	}
+}
